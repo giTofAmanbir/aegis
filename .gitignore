@@ -1,0 +1,106 @@
+# ==============================================================================
+# Aegis .gitignore
+# ==============================================================================
+
+# --- Python & Bytecode ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# --- Virtual Environments ---
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# --- Environment Variables & Secrets ---
+.env
+.env.*
+*.env.local
+frontend/.env
+frontend/.env.local
+frontend/.env.*.local
+# Allow example environment templates to be tracked
+!.env.example
+!frontend/.env.example
+
+# --- Databases & SQLite Runtime Files ---
+*.db
+*.db-shm
+*.db-wal
+*.db-journal
+*.sqlite
+*.sqlite3
+aegis.db
+aegis.db-shm
+aegis.db-wal
+
+# --- Model Artifacts (Optional) ---
+# Note: src/aegis_model.pkl (~6 MB) is currently tracked for standalone deployment.
+# Uncomment below if you manage models via Git LFS, S3, or MLflow:
+# *.pkl
+# *.joblib
+# src/aegis_model.pkl
+
+# --- Testing & Coverage ---
+.pytest_cache/
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+.tox/
+.nox/
+
+# --- Frontend & Node (React / Vite) ---
+node_modules/
+frontend/node_modules/
+dist/
+frontend/dist/
+dist-ssr/
+frontend/dist-ssr/
+.eslintcache
+.vite/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# --- Jupyter Notebooks ---
+.ipynb_checkpoints/
+*-checkpoint.ipynb
+
+# --- IDEs & Code Editors ---
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# --- Operating System Files ---
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# --- Temporary & Local Scratch Files ---
+*.tmp
+*.bak
+*.log
+logs/
+inspect_db.py
